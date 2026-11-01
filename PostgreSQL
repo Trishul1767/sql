@@ -49,4 +49,9 @@ everytime we open the terminal:
 we first need to start the server ny sudo service postgresql start
 
 
-CREATE TABLE cars
+CREATE TABLE cars (
+    car_id NUMBER PRIMARY KEY,
+    model VARCHAR(50),
+    student_id NUMBER,
+    FOREIGN KEY (student_id) REFERENCES students(id)
+);
